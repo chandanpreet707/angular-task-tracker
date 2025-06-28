@@ -80,4 +80,23 @@ export class ArchiveComponent implements OnInit {
   deleteTask(id: string) {
     this.taskService.deleteTask(id);
   }
+
+  getStatusClass(status: string): string {
+    switch(status) {
+      case 'To Do': return 'status-todo';
+      case 'In Progress': return 'status-progress';
+      case 'Done': return 'status-done';
+      default: return '';
+    }
+  }
+  
+  getCategoryClass(category: string): string {
+    switch(category) {
+      case 'Work': return 'category-work';
+      case 'Personal': return 'category-personal';
+      case 'Urgent': return 'category-urgent';
+      case 'Other': return 'category-other';
+      default: return '';
+    }
+  }
 }
