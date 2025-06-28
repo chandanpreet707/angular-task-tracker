@@ -1,6 +1,6 @@
 # Task Tracker Application
 
-A modern task management system built using **Angular 19** and **Angular Material**, designed to showcase advanced frontend development skills. This application meets all the requirements of the Novatek Angular Internship Assessment, while also extending functionality with dynamic filtering, a real-time dashboard, and responsive UX enhancements.
+A modern and responsive task management application developed to demonstrate advanced frontend development skills. The project meets all specified assessment requirements and extends functionality with features such as dynamic filtering, a real-time analytics dashboard, API-driven tagging, and a refined user experience optimized for both desktop and mobile environments.
 
 ---
 
