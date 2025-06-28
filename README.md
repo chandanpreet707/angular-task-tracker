@@ -66,16 +66,20 @@ The Task Tracker App enables users to create, manage, track, and organize their 
 
 ---
 
-## Project Structure
+### Project Structure
+
+```
 src/
 ├── app/
-│ ├── components/ # TaskList, TaskForm, TaskDetail, Archive
-│ ├── services/ # TaskService, TagService
-│ ├── pipes/ # dueDateFormat, truncate
-│ ├── directives/ # appOverdueHighlight
-│ ├── models/ # Task interface
-│ └── app-routing.module.ts
+│   ├── components/        # TaskList, TaskForm, TaskDetail, Archive
+│   ├── services/          # TaskService, TagService
+│   ├── pipes/             # dueDateFormat, truncate
+│   ├── directives/        # appOverdueHighlight
+│   ├── models/            # Task interface
+│   └── app-routing.module.ts
 └── assets/
+```
+
 
 
 ---
@@ -109,13 +113,35 @@ bash
 - Reusable components, pipes, and directives
 - Lazy-loaded routes for performance
 - Graceful API error handling and fallback UI
-- Cached API responses using RxJS ``` BehaviorSubject
-```
+- Cached API responses using RxJS `BehaviorSubject`
 ---
 ## Screenshots
+### Task Management Dashboard
+---
+![Tasks Overview](screenshots/tasks.png)
+### Search Filters
+---
+![Tasks Overview](screenshots/search_filter.png)
+### Task Creation
+---
+![Tasks Overview](screenshots/add_new_task.png)
+### Task Editing
+---
+![Tasks Overview](screenshots/edit.png)
+### Archive Management
+---
+![Tasks Overview](screenshots/archive.png)
 ---
 
-## Demo
+### Demo
 
----
+Watch a full walkthrough of the application:
+
+[Click here to view the demo](https://your-demo-link.com)
+
+### Contact
+
+**Chandanpreet Singh**  
+[https://chandanpreet.com/#contact](https://chandanpreet.com/#contact)
+
 
