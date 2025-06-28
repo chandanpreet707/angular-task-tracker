@@ -71,8 +71,7 @@ export class ArchiveComponent implements OnInit {
     const task = this.taskService.getTaskById(id);
     if (task) {
       this.taskService.updateTask(id, {
-        archived: false,
-        status: task.status === TaskStatus.DONE ? TaskStatus.TODO : task.status
+        archived: false
       });
     }
   }

@@ -17,6 +17,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
       padding: 20px;
       max-width: 1200px;
       margin: 0 auto;
+      min-height: calc(100vh - 64px);
+      padding-bottom: 40px;
     }
   `]
 })

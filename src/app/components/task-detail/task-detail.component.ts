@@ -126,6 +126,14 @@ import { MatChipInputEvent } from '@angular/material/chips';
     .char-counter-normal { color: #666; }
     .char-counter-warning { color: #ff9800; }
     .char-counter-danger { color: #f44336; }
+    
+    mat-card-content {
+      padding-top: 24px !important;
+    }
+    
+    mat-card-content form .full-width:first-child {
+      margin-top: 8px;
+    }
   `]
 })
 export class TaskDetailComponent implements OnInit {
