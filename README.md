@@ -1,52 +1,121 @@
 # Task Tracker Application
 
-A comprehensive task management system built with Angular 19 and Angular Material, designed to demonstrate proficiency in modern web development practices and Angular framework capabilities.
+A modern task management system built using **Angular 19** and **Angular Material**, designed to showcase advanced frontend development skills. This application meets all the requirements of the Novatek Angular Internship Assessment, while also extending functionality with dynamic filtering, a real-time dashboard, and responsive UX enhancements.
 
-## Application Overview
+---
 
-This task tracker provides users with a complete solution for managing daily tasks, featuring intuitive interfaces for task creation, organization, and tracking. The application incorporates advanced filtering capabilities, real-time statistics, and a clean, responsive design suitable for both desktop and mobile environments.
+## Overview
+
+The Task Tracker App enables users to create, manage, track, and organize their daily tasks efficiently. It features reactive forms, in-memory data management, custom pipes, directives, and a dashboard UI — all optimized for mobile and desktop usage.
+
+---
 
 ## Core Features
 
-The application includes full CRUD operations for task management, allowing users to create, read, update, and delete tasks with comprehensive form validation. Tasks can be organized by status (To Do, In Progress, Done) and categories (Work, Personal, Urgent, Other), with optional due date assignment and custom tagging capabilities.
+- **Task Management (CRUD)**
+  - Create, read, update, delete tasks.
+  - Archive and restore completed tasks.
 
-An archive system enables users to store completed tasks while maintaining the ability to restore them when needed. The interface provides visual indicators for overdue items and includes search functionality with multi-criteria filtering options.
+- **Dynamic Form Validation**
+  - Validations for title, description, category, due date, tags.
+  - Custom validators for tags and due date restrictions.
 
-## Enhanced Functionality
+- **Routing & Navigation**
+  - `/tasks`: Task list.
+  - `/task/:id`: Task detail and edit view.
+  - `/archive`: Archived tasks.
 
-Beyond standard task management, the application features a real-time analytics dashboard displaying task completion rates, pending item counts, and progress visualization through interactive charts. Users can filter tasks by status, category, or search terms, with results updating dynamically.
+- **Dashboard & Stats**
+  - Real-time task status summary: Total, Pending, Overdue, Completed.
+  - Task progress bars and completion rate display.
 
-The tag system integrates with the JSONPlaceholder API to provide suggested tags from user data, while supporting custom tag creation with validation constraints. Form inputs include character counting for descriptions and comprehensive error messaging that appears contextually during user interaction.
+- **Search & Filtering**
+  - Search tasks by title or description.
+  - Filter by status and category.
 
-## Technical Architecture
+- **Tags via API**
+  - Fetch predefined tags from JSONPlaceholder API.
+  - Support custom user-defined tags.
+  - API failure handling and local caching.
 
-Built on Angular 19 using standalone components, the application follows modern Angular development patterns with reactive forms, RxJS for state management, and TypeScript for type safety. The component architecture separates concerns effectively with dedicated services for data management and API integration.
+---
 
-Custom pipes handle date formatting and text truncation, while a custom directive provides visual highlighting for overdue tasks. The responsive design utilizes Angular Material components with custom styling to create a professional, accessible interface.
+## Additional Enhancements
 
-## Installation and Setup
+- **Custom Pipes**
+  - `dueDateFormat`: Formats due dates (overdue label, MM/DD/YYYY).
+  - `truncate`: Truncates task description to 50 characters.
 
-To run the application locally, clone the repository and install dependencies using npm. The development server can be started with the Angular CLI serve command, making the application available at localhost:4200.
+- **Custom Directives**
+  - `appOverdueHighlight`: Highlights overdue tasks with red borders.
 
+- **Responsive UI**
+  - Built with Angular Material and responsive breakpoints.
+  - Touch-friendly and accessible layout for mobile users.
+
+---
+
+## Technical Stack
+
+- **Framework**: Angular 19
+- **UI Library**: Angular Material
+- **Forms**: Reactive Forms with custom validators
+- **State**: RxJS Observables and Services
+- **API**: JSONPlaceholder
+- **Tooling**: Angular CLI
+
+---
+
+## Project Structure
+src/
+├── app/
+│ ├── components/ # TaskList, TaskForm, TaskDetail, Archive
+│ ├── services/ # TaskService, TagService
+│ ├── pipes/ # dueDateFormat, truncate
+│ ├── directives/ # appOverdueHighlight
+│ ├── models/ # Task interface
+│ └── app-routing.module.ts
+└── assets/
+
+
+---
+
+## Installation & Setup
+
+To run this project locally:
+
+bash
+```bash
+    git clone https://github.com/chandanpreet707/angular-task-tracker.git
+    cd angular-task-tracker
+    npm install
+    ng serve
 ```
-git clone https://github.com/chandanpreet707/angular-task-tracker.git
-cd angular-task-tracker
-npm install
-ng serve
+---
+
+## Validation Summary
+| Field  | Rules  |
+| ------------ | ------------ |
+| Title  | Required, 3–50 characters  |
+| Description  | Optional, max 200 characters  |
+| Status |  Required, one of: To Do, In Progress, Done |
+| Due Date  | Optional, must not be in the past  |
+| Category  |  Required, one of: Work, Personal, Urgent, Other |
+| Tags  |  Optional, max 5 tags, each 2–20 characters |
+---
+## Best Practices Followed
+- Feature-based folder structure
+- Angular Style Guide conventions
+- Reusable components, pipes, and directives
+- Lazy-loaded routes for performance
+- Graceful API error handling and fallback UI
+- Cached API responses using RxJS ``` BehaviorSubject
 ```
+---
+## Screenshots
+---
 
-## Project Organization
+## Demo
 
-The codebase follows Angular style guide conventions with a clear separation of components, services, models, and utilities. Components are organized by feature area, with shared services managing data flow and API interactions. Custom pipes and directives are maintained in dedicated directories for reusability.
+---
 
-The routing configuration supports lazy loading for optimal performance, with three main routes handling the task list, individual task management, and archived items. Form validation implements both synchronous and asynchronous validators with comprehensive error handling.
-
-## Development Considerations
-
-The application demonstrates best practices in Angular development including proper error handling, loading states, and user feedback mechanisms. API integration includes caching strategies and fallback options for network failures.
-
-Styling follows Material Design principles while incorporating custom enhancements for brand consistency. The responsive design ensures functionality across device sizes with appropriate touch targets and readable typography.
-
-## Standards Compliance
-
-This implementation meets all specified requirements for the assessment while extending functionality with professional-grade features. The codebase demonstrates competency in modern web development practices, Angular framework utilization, and user experience design principles.
