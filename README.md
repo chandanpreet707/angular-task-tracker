@@ -1,59 +1,121 @@
-# TaskTracker
+# Task Tracker Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+A modern task management system built using **Angular 19** and **Angular Material**, designed to showcase advanced frontend development skills. This application meets all the requirements of the Novatek Angular Internship Assessment, while also extending functionality with dynamic filtering, a real-time dashboard, and responsive UX enhancements.
 
-## Development server
+---
 
-To start a local development server, run:
+## Overview
 
+The Task Tracker App enables users to create, manage, track, and organize their daily tasks efficiently. It features reactive forms, in-memory data management, custom pipes, directives, and a dashboard UI — all optimized for mobile and desktop usage.
+
+---
+
+## Core Features
+
+- **Task Management (CRUD)**
+  - Create, read, update, delete tasks.
+  - Archive and restore completed tasks.
+
+- **Dynamic Form Validation**
+  - Validations for title, description, category, due date, tags.
+  - Custom validators for tags and due date restrictions.
+
+- **Routing & Navigation**
+  - `/tasks`: Task list.
+  - `/task/:id`: Task detail and edit view.
+  - `/archive`: Archived tasks.
+
+- **Dashboard & Stats**
+  - Real-time task status summary: Total, Pending, Overdue, Completed.
+  - Task progress bars and completion rate display.
+
+- **Search & Filtering**
+  - Search tasks by title or description.
+  - Filter by status and category.
+
+- **Tags via API**
+  - Fetch predefined tags from JSONPlaceholder API.
+  - Support custom user-defined tags.
+  - API failure handling and local caching.
+
+---
+
+## Additional Enhancements
+
+- **Custom Pipes**
+  - `dueDateFormat`: Formats due dates (overdue label, MM/DD/YYYY).
+  - `truncate`: Truncates task description to 50 characters.
+
+- **Custom Directives**
+  - `appOverdueHighlight`: Highlights overdue tasks with red borders.
+
+- **Responsive UI**
+  - Built with Angular Material and responsive breakpoints.
+  - Touch-friendly and accessible layout for mobile users.
+
+---
+
+## Technical Stack
+
+- **Framework**: Angular 19
+- **UI Library**: Angular Material
+- **Forms**: Reactive Forms with custom validators
+- **State**: RxJS Observables and Services
+- **API**: JSONPlaceholder
+- **Tooling**: Angular CLI
+
+---
+
+## Project Structure
+src/
+├── app/
+│ ├── components/ # TaskList, TaskForm, TaskDetail, Archive
+│ ├── services/ # TaskService, TagService
+│ ├── pipes/ # dueDateFormat, truncate
+│ ├── directives/ # appOverdueHighlight
+│ ├── models/ # Task interface
+│ └── app-routing.module.ts
+└── assets/
+
+
+---
+
+## Installation & Setup
+
+To run this project locally:
+
+bash
 ```bash
-ng serve
+    git clone https://github.com/chandanpreet707/angular-task-tracker.git
+    cd angular-task-tracker
+    npm install
+    ng serve
 ```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+## Validation Summary
+| Field  | Rules  |
+| ------------ | ------------ |
+| Title  | Required, 3–50 characters  |
+| Description  | Optional, max 200 characters  |
+| Status |  Required, one of: To Do, In Progress, Done |
+| Due Date  | Optional, must not be in the past  |
+| Category  |  Required, one of: Work, Personal, Urgent, Other |
+| Tags  |  Optional, max 5 tags, each 2–20 characters |
+---
+## Best Practices Followed
+- Feature-based folder structure
+- Angular Style Guide conventions
+- Reusable components, pipes, and directives
+- Lazy-loaded routes for performance
+- Graceful API error handling and fallback UI
+- Cached API responses using RxJS ``` BehaviorSubject
 ```
+---
+## Screenshots
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Demo
 
-```bash
-ng generate --help
-```
+---
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
