@@ -137,7 +137,7 @@ bash
 
 Watch a full walkthrough of the application:
 
-[Click here to view the demo](https://your-demo-link.com)
+[Click here to view the demo](https://youtu.be/pj64cZqenlE)
 
 ### Contact
 
